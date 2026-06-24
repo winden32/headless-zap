@@ -2,10 +2,10 @@ FROM ghcr.io/zaproxy/zaproxy:stable
 
 USER root
 
-COPY tarama.sh /zap/tarama.sh
+COPY tarama.sh /zap/scan.sh
 
-RUN chmod +x /zap/tarama.sh
+RUN chmod +x /zap/scan.sh
 
 WORKDIR /zap/wrk
 
-ENTRYPOINT ["/zap/tarama.sh"]
+ENTRYPOINT ["/zap/scan.sh"]
